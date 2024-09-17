@@ -1,5 +1,5 @@
 .campaign-form-container {
-    padding: 10px 10px 10px 100px;
+    padding: 0px 10px 10px 100px;
     width: 1000px;
     margin-left: 280px;
   }
@@ -8,6 +8,35 @@
     margin-bottom: 20px;
     color: #666666;
   }
+
+  .form-groupp{
+    width: 100px;
+    margin: 20px 0px;
+    color: #666666;
+    display: flex;
+    align-items: center; /* This aligns items vertically in the center */
+    gap: 10px; /* Adds some space between the text and the toggle */
+    vertical-align: middle;
+  }
+
+  .form-groupp, .na{
+    display: inline-block;
+  }
+
+  .form-groupp, .label-text {
+    display: inline-block;
+    margin-right: 10px; /* Adds space between text and toggle */
+    vertical-align: middle;
+    width: 720px;
+  }
+
+  .form-groupp, .switch {
+    position: relative;
+    width: 60px; /* Make sure this is the correct width */
+    height: 34px; /* Adjust height as needed */
+    display: inline-block;
+}
+
   
   .form-row {
     display: flex;
@@ -20,6 +49,7 @@
     font-weight: bold;
   }
   
+  
   .form-group input,
   .form-group textarea {
     width: 100%;
@@ -28,7 +58,6 @@
     margin-top: 5px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    font-family: Nunito;
   }
   
   .form-group input[type="checkbox"] {

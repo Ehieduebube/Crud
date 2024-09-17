@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router-dom';
 
 const MainContentContainer = styled.div`
   flex: 1;
-  padding: 20px;
+  padding: 100px 20px 20px 20px;
   background-color: #ffffff;
   top: 128px;
   left: 377px;
@@ -23,7 +23,7 @@ const EmptyState = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100%;
+  height: 728px;
   text-align: center;
 `;
 
@@ -81,7 +81,7 @@ const navigateToNewCampaign = () => {
     </New>
       <EmptyState>
         <img src={Search} alt=" " />
-        <p>No activity yet. Create a new campaign to get started.</p>
+        <p><b>No activity yet. Create a new campaign to get started.</b></p>
         <Button onClick={navigateToNewCampaign}>+ New Campaign</Button>
       </EmptyState>
     </MainContentContainer>

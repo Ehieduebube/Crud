@@ -27,6 +27,11 @@ const ContentContainer = styled.div`
 const API_URL = 'https://infinion-test-int-test.azurewebsites.net/api/Campaign';
 
 const Campaigninfo = () => {
+  const [isToggled, setIsToggled] = useState(true);
+
+    const handleToggle = () => {
+        setIsToggled(!isToggled);
+    };
    
     const navigate = useNavigate();
     const { id } = useParams();
@@ -197,15 +202,21 @@ const Campaigninfo = () => {
           />
             </div>
 
-          <div className="form-group">
-            <label>Want to receive daily digest about the campaign?</label>
-            <input
-              type="checkbox"
-              name="digestCampaign"
-              checked={campaign.digestCampaign}
-              onChange={handleInputChange}
-            />
+            <div className="form-groupp">
+        <div className='na'>
+        <span class="label-text">Want to receive daily digest about the campaign?</span>
+          <label className="switch">
+          
+          <input type="checkbox" 
+          name="digestCampaign"
+          checked={campaign.digestCampaign.isToggled}
+           onChange={handleToggle.handleInputChange} />
+                <span className="slider"></span>
+                </label>
+
+          
           </div>
+        </div>
 
           <div className="form-group">
             <label>Kindly select the time you want to receive daily digest</label>

@@ -9,7 +9,9 @@ import GlobalStyle from '../src/styles/globalstyles';
 import Sidebar from '../src/components/Sidebar';
 import Header from '../src/components/Header2';
 import success from '../images/success.png'
+
 import '../css/newcampaign.css'
+import '../css/toggleswitch.css'
 
 const AppContainer = styled.div`
   display: flex;
@@ -34,6 +36,11 @@ const Main = styled.div`
 const API_URL = 'https://infinion-test-int-test.azurewebsites.net/api/Campaign';
 
 const Newcampaign = () => {
+  const [isToggled, setIsToggled] = useState(true);
+
+    const handleToggle = () => {
+        setIsToggled(!isToggled);
+    };
   const [campaigns, setCampaigns] = useState([]);
   const [newCampaign, setNewCampaign] = useState({
     campaignName: '',
@@ -64,7 +71,7 @@ const Newcampaign = () => {
           endDate: '',
           digestCampaign: false,
           linkedKeywords: '',
-          dailyDigest: ''
+          dailyDigest: selectedOption || '',
         });
         setError(null);
       })
@@ -106,6 +113,17 @@ const Newcampaign = () => {
   const navigateToOverview = () => {
     navigate('/Overview');}
 -0   
+const [selectedOption, setSelectedOption] = useState('');
+
+const handleSelectChange = (event) => {
+    setSelectedOption(event.target.value); // Update the selected option
+  };
+
+  const [selectedValue, setSelectedValue] = useState('');
+  
+
+  
+
     return (
       <>
         <GlobalStyle />
@@ -115,19 +133,19 @@ const Newcampaign = () => {
             <Header />
             <Main style={{marginLeft: '280px'}}>
               <div>
-                <h1 style={{fontSize: '20px', fontWeight: '900', padding:'10px 2px'}}>Create New Campaign</h1>
+                <h1 style={{fontSize: '20px', fontWeight: '900', padding:'30px 2px 2px 2px'}}><b>Create New Campaign</b></h1>
               </div>
             </Main>
 
             <div className="campaign-form-container">
       <form onSubmit={handleCreateCampaign}>
         <div className="form-group">
-          <label>Campaign Name *</label>
+          <label>Campaign Name<span style={{ color: '#EF2D2B'}}> *</span></label>
           <input type="text"
           name="campaignName"
           value={newCampaign.campaignName}
           onChange={handleInputChange}
-          placeholder="Campaign Name"
+          placeholder="e.g The Future is now"
           required/>
         </div>
 
@@ -137,19 +155,19 @@ const Newcampaign = () => {
           name="campaignDescription"
           value={newCampaign.campaignDescription}
           onChange={handleInputChange}
-          placeholder="Campaign Description"
+          placeholder="Please add a description to your campaign"
           required
             ></textarea>
         </div>
 
         <div className="form-row">
           <div className="form-group">
-            <label>Start Date *</label>
+            <label>Start Date <span style={{ color: '#EF2D2B'}}> *</span></label>
             <DatePicker 
               selected={newCampaign.startDate}
           onChange={(date) => handleDateChange(date, 'startDate')}
           dateFormat="yyyy-MM-dd"
-          placeholderText="Start Date"
+          placeholderText="dd/mm/yyy"
           required
             />
           </div>
@@ -160,44 +178,54 @@ const Newcampaign = () => {
               selected={newCampaign.endDate}
           onChange={(date) => handleDateChange(date, 'endDate')}
           dateFormat="yyyy-MM-dd"
-          placeholderText="End Date"
+          placeholderText="dd/mm/yyy"
           required
             />
           </div>
         </div>
 
-        <div className="form-group">
-          <label>Want to receive daily digest about the campaign?</label>
-          <input 
-             type="checkbox"
-            name="digestCampaign"
-            checked={newCampaign.digestCampaign}
-            onChange={handleInputChange}
-          />
+        <div className="form-groupp">
+        <div className='na'>
+        <span class="label-text">Want to receive daily digest about the campaign?</span>
+          <label className="switch">
+          
+          <input type="checkbox" 
+          name="digestCampaign"
+          checked={newCampaign.digestCampaign.isToggled}
+           onChange={handleToggle.handleInputChange} />
+                <span className="slider"></span>
+                </label>
+
+          
+          </div>
         </div>
 
         <div className="form-group">
-          <label>Linked Keywords *</label>
+          <label>Linked Keywords <span style={{ color: '#EF2D2B'}}> *</span></label>
           <input 
             type="text"
           name="linkedKeywords"
           value={newCampaign.linkedKeywords}
           onChange={handleInputChange}
-          placeholder="Linked Keywords (comma-separated)"
+          placeholder="To add keywords, type your keyword and press enter"
           required
           />
         </div>
 
         <div className="form-group">
-          <label>Kindly select how often you want to receive daily digest</label>
-          <input 
-            type="text"
+          <label htmlFor="dailyDigest" style={{ marginRight: '10px' }}>Kindly select how often you want to receive daily digest</label>
+            
+          <select id="dailyDigest"  
           name="dailyDigest"
-          value={newCampaign.dailyDigest}
-          onChange={handleInputChange}
-          placeholder="Enter time"
+          value={newCampaign.selectedOption}
+          onChange={handleSelectChange}
           required
-          />
+          placeholder="Select" >
+          <option value=""></option>
+        <option value='daily'>Daily</option>
+        <option value='weekly'>Weekly</option>
+        <option value='monthly'>Monthly</option>
+          </select>
         </div>
 
         <div className="form-buttons">

@@ -26,7 +26,7 @@ const Logo = styled.div`
   left: 104px;
   height: 32px;
   font-weight: 700;
-  margin-bottom: 80px;
+  margin-bottom: 50px;
   color:  #008c8c;
   margin-right: 50px;
 `;
@@ -38,10 +38,8 @@ const StyledImage = styled.img`
 const MenuItem = styled.div`
   width: 100%;
   padding: 10px;
-  margin: 5px 0;
+  margin: 15px 0;
   text-align: center;
-  font-family: Nunito;
-  fpnt-weight: 600; 
   text-align: left;
   padding-right: 24px;
   size: 14px;
@@ -55,17 +53,16 @@ const Items = styled.button`
   text-align: left;
   border-style: none!important;
   background-color: #F0F4F4;
-  margin-bottom: 70px;
+  margin: 10px 0px;
 `;
 
 const Button = styled.button`
   padding: 10px 30px;
-  font-family: Nunito;
   fpnt-weight: 600; 
   size: 14px;
   text-align: left;
-  margin-top: 20px;
-  margin-bottom: 40px;
+  margin-top: 10px;
+  margin-bottom: 20px;
   background-color: #008c8c;
   line-height: 20px;
   color: white;
@@ -76,7 +73,7 @@ const Button = styled.button`
 
 const HelpContainer = styled.div`
   background-color: #ffffff;
-  padding: 30px 41px 30px 41px;
+  padding: 10px 41px 10px 41px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   text-align: center;

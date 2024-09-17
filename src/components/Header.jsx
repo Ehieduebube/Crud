@@ -15,6 +15,7 @@ const HeaderContainer = styled.div`
   padding: 10px 10px;
   background-color: #fff;
   border-bottom: 1px solid rgba(243, 243, 243, 1);
+  position: fixed;
   margin-left: 292px;
 `;
 
@@ -33,7 +34,7 @@ const Header = () => {
   return (
     <HeaderContainer>
     <div style={{paddingLeft:'90px'}}>
-      <In><p>search..<img src={Search}  style={{ paddingLeft: '300px'}}/></p></In>
+      <In><p>search..<img src={Search}  style={{ paddingLeft: '280px'}}/></p></In>
       </div>
 
       <div>
