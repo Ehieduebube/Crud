@@ -8,7 +8,7 @@ import Arrow from '../../images/arrowdown.png';
 
 const HeaderContainer = styled.div`
   display: flex;
-  width: 1096px;
+  width: 1196px;
   height: 92px;
   justify-content: space-between;
   align-items: center;
