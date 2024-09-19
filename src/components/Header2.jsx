@@ -7,7 +7,7 @@ import Arrow from '../../images/arrowdown.png';
 
 const HeaderContainer = styled.div`
   display: flex;
-  width: 1290px;
+  width: 1096px;
   height: 92px;
   justify-content: space-between;
   align-items: center;
@@ -36,12 +36,13 @@ const Header = () => {
       <In><p>Search for anything...</p></In>
       </div>
 
-      <div>
-      <img src={Bell}  style={{ paddingRight: '10px', borderRight: '1px solid rgba(243, 243, 243, 1)'}}/>   
+      <div style={{ width:'171px', height:'35px'}}> 
+      <img src={Bell}  style={{ paddingRight: '5px', borderRight: '1px solid rgba(243, 243, 243, 1)'}}/>   
       <img src={Pic}  style={{ paddingRight: '1px', paddingLeft: '1px'}}/>
         <span>BigTech</span>
-        <img src={Arrow}  style={{ paddingRight: '10px', borderRight: '4px'}}/>
+        <img src={Arrow}  style={{ paddingRight: '1px', borderRight: '4px'}}/>
       </div>
+
 
     </HeaderContainer>
   );

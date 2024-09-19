@@ -17,7 +17,7 @@ const Modaldelete = ({ show, title, body }) => {
       <Modal.Body style={{paddingLeft:'110px'}}>{body}</Modal.Body>
       
         <div style={{padding:'30px 10px 70px 110px'}}>
-        <Button  onClick={navigateToCampaign} style={{backgroundColor:'#247B7B', padding:'12px 32px 16px 32px', fontFamily:'syne', width:'240px'}}>
+        <Button  onClick={navigateToCampaign} style={{backgroundColor:'#247B7B', padding:'12px 32px 16px 32px', width:'240px'}}>
           Go back to campaign list
         </Button>
         </div>

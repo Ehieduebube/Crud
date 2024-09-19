@@ -8,8 +8,8 @@ import Arrow from '../../images/arrowdown.png';
 
 const HeaderContainer = styled.div`
   display: flex;
+  width: 1096px;
   height: 92px;
-  width: 1290px;
   justify-content: space-between;
   align-items: center;
   padding: 10px 10px;
@@ -33,15 +33,15 @@ const In = styled.div`
 const Header = () => {
   return (
     <HeaderContainer>
-    <div style={{paddingLeft:'90px'}}>
+    <div style={{paddingLeft:'80px'}}>
       <In><p>search..<img src={Search}  style={{ paddingLeft: '280px'}}/></p></In>
       </div>
 
-      <div>
-      <img src={Bell}  style={{ paddingRight: '10px', borderRight: '1px solid rgba(243, 243, 243, 1)'}}/>   
-      <img src={Profile}  style={{ paddingRight: '10px', paddingLeft: '9px'}}/>
+      <div style={{ width:'171px',height:'35px'}}> 
+      <img src={Bell}  style={{ paddingRight: '15px', borderRight: '1px solid rgba(243, 243, 243, 1)'}}/>   
+      <img src={Profile}  style={{ paddingRight: '5px', paddingLeft: '10px'}}/>
         <span>BigTech</span>
-        <img src={Arrow}  style={{ paddingRight: '10px',}}/>
+        <img src={Arrow}  style={{ paddingRight: '1px', borderRight: '4px'}}/>
       </div>
 
     </HeaderContainer>

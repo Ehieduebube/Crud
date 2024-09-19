@@ -1,13 +1,6 @@
 .campaign-info-form-container {
-    padding: 120px 20px 20px 100px;
-    width: 984px;
-    height: 456px;
-    color: #247B7B;
-    font-family: Work Sans;
-    font-size: 20px;
-    font-weight: 600;
-    line-height: 28px;
-    text-align: left;
+    padding: 100px 20px 20px 100px;
+    width: 1000px;
     margin-left: 280px;
 }
 
@@ -19,7 +12,6 @@
   
 .form-group {
     margin-bottom: 20px;
-    font-family: Nunito;
     font-size: 14px;
     font-weight: 500;
     line-height: 20px;
@@ -28,6 +20,31 @@
     margin-bottom: 15px;
     margin-top: 15px;
 }
+
+.form-groupp{
+    width: 100px;
+    margin: 20px 0px;
+    color: #666666;
+    display: flex;
+    align-items: center; /* This aligns items vertically in the center */
+    gap: 10px; /* Adds some space between the text and the toggle */
+    vertical-align: middle;
+}
+
+.form-groupp, .na{
+    display: inline-block;
+}
+
+.form-groupp, .label-text {
+    display: inline-block;
+    margin-right: 10px; /* Adds space between text and toggle */
+    vertical-align: middle;
+    width: 720px;
+    font-size: 14px;
+    font-weight: bolder;
+    line-height: 18px;
+    text-align: left;
+  }  
   
 .form-row {
     display: flex;
@@ -37,6 +54,7 @@
 .form-group label {
     display: block;
     font-weight: bold;
+    margin-bottom: 5px;
 }
   
 .form-group input,

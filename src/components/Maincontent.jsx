@@ -33,14 +33,12 @@ const New = styled.h1`
   height: 40px;
   left:337px;
   font-size: 10px;
-  font-family: General Sans;
   justify: space-between;
   display: flex;
 `;
 
 const Button = styled.button`
   padding: 10px 30px;
-  font-family: Nunito;
   fpnt-weight: 600; 
   size: 14px;
   text-align: left;
@@ -64,7 +62,7 @@ const navigateToNewCampaign = () => {
   return (
     <MainContentContainer>
     <New>
-      <h1 style={{ fontSize: '24px', fontWeight: 'bolder', lineHeight: '58px', fontFamily: 'General Sans', width: '112px', height: '28px', color: '#008c8c'}}>Overview</h1>
+      <h1 style={{ fontSize: '24px', fontWeight: 'bolder', lineHeight: '58px', width: '112px', height: '28px', color: '#008c8c'}}>Overview</h1>
 
       <div>
       <p style={{marginLeft: '400px', border: '1px solid rgba(243, 243, 243, 1)', fontSize: '15px', lineHeight: '30px', justify: 'space-between', padding:'5px 10px'}}>
@@ -73,7 +71,7 @@ const navigateToNewCampaign = () => {
 
       <img src={Arrow} className="img-fluid" alt="" style={{ paddingRight: '10px',}}/>
 
-      <button style= {{border: 'none', backgroundColor:'#F0F4F4', borderRadius:'4px', padding:'5px 30px',color: '#008c8c'}}>
+      <button style= {{border: 'none', backgroundColor:'#F0F4F4', borderRadius:'4px', padding:'5px 10px',color: '#008c8c'}}>
       <img src={Export} className="img-fluid" alt="" style={{ paddingRight: '10px',}}/>Export</button>
       
       </p>
